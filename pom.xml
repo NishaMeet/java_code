@@ -78,6 +78,7 @@
 				<version>2.5.1</version>
 				<configuration>
 					<tagNameFormat>v@{project.version}</tagNameFormat>
+					<mainClass>${start-class}</mainClass>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 				</configuration>
 			</plugin>
