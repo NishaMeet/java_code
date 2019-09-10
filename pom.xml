@@ -4,7 +4,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>devops</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<name>devops</name>
@@ -25,10 +25,23 @@
 		<jacoco.version>0.7.9</jacoco.version>
 	</properties>
 
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>releases</name>
+			<url>http://54.145.55.200:8081/artifactory/libs-release-local/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshot</id>
+			<name>snapshots</name>
+			<url>http://54.145.55.200:8081/artifactory/libs-snapshot-local/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<scm>
 		<connection>scm:git:git@github.com:keshavkummari/devops.git</connection>
-		<developerConnection>scm:git:git@github.com:NishaMeet/java_code.git</developerConnection>
-		<url>git@github.com:NishaMeet/java_code.git</url>
+		<developerConnection>scm:git:git@github.com:keshavkummari/devops.git</developerConnection>
+		<url>git@github.com:keshavkummari/devops.git</url>
 		<tag>HEAD</tag>
 	</scm>
 
@@ -78,7 +91,6 @@
 				<version>2.5.1</version>
 				<configuration>
 					<tagNameFormat>v@{project.version}</tagNameFormat>
-					<mainClass>${start-class}</mainClass>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 				</configuration>
 			</plugin>
